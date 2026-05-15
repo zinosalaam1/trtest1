@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Gamepad2, Eye, EyeOff, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { ApiError } from '../utils/api';
+import logo from "../../assets/trbg.png";
 
 export function SignupPage() {
   const { register } = useAuth();
@@ -60,7 +61,8 @@ export function SignupPage() {
     <div className="min-h-screen bg-black text-white flex flex-col">
       <header className="flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6">
         <Link to="/" className="flex items-center gap-2">
-          <Gamepad2 className="w-7 h-7 sm:w-8 sm:h-8 text-purple-500" />
+          <img src={logo} alt="Tour Arcade Logo" className="w-10 h-10 object-contain"
+  />
           <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Tour Arcade</span>
         </Link>
         <Link to="/signin" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Already have an account?</Link>
