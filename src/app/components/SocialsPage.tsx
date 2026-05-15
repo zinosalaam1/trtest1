@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg';
 
 import { Input } from './ui/input';
 import { socialApi } from '../utils/api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 interface SocialsPageProps {
@@ -22,9 +22,18 @@ const pendingRequests = [
 
 
 export function SocialsPage({
+  onBack,
+  onOpenSettings,
+  onOpenProfile,
+  onNavigate
+}: SocialsPageProps) {
   const [friends, setFriends] = useState<any[]>([]);
   const [messages, setMessages] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [selectedFriend, setSelectedFriend] = useState<number>(1);
+  const [chatInput, setChatInput] = useState('');
+  const [activeTab, setActiveTab] = useState<'friends' | 'requests' | 'party'>('friends');
 
   useEffect(() => {
     Promise.all([
@@ -37,9 +46,7 @@ export function SocialsPage({
     });
   }, []);
  onBack, onOpenSettings, onOpenProfile, onNavigate }: SocialsPageProps) {
-  const [selectedFriend, setSelectedFriend] = useState<number>(1);
-  const [chatInput, setChatInput] = useState('');
-  const [activeTab, setActiveTab] = useState<'friends' | 'requests' | 'party'>('friends');
+
 
   return (
     <div className="min-h-screen bg-black text-white flex">
