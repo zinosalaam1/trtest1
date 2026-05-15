@@ -45,8 +45,6 @@ export function SocialsPage({
       setIsLoading(false);
     });
   }, []);
- onBack, onOpenSettings, onOpenProfile, onNavigate }: SocialsPageProps) {
-
 
   return (
     <div className="min-h-screen bg-black text-white flex">
