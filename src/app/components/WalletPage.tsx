@@ -31,7 +31,6 @@ export function WalletPage({
       })
       .catch(() => setIsLoading(false));
   }, []);
- onBack, onOpenSettings, onOpenProfile, onNavigate }: WalletPageProps) {
   const totalBalance = 542.75;
   const totalEarnings = 1245.50;
   const pendingPayout = 125.00;
