@@ -12,14 +12,22 @@ interface WalletPageProps {
 
 
 export function WalletPage({
+  onBack,
+  onOpenSettings,
+  onOpenProfile,
+  onNavigate,
+}: WalletPageProps) {
+
   const [transactions, setTransactions] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    walletApi.transactions().then(data => {
-      setTransactions(data || []);
-      setIsLoading(false);
-    }).catch(() => setIsLoading(false));
+    walletApi.transactions()
+      .then(data => {
+        setTransactions(data || []);
+        setIsLoading(false);
+      })
+      .catch(() => setIsLoading(false));
   }, []);
  onBack, onOpenSettings, onOpenProfile, onNavigate }: WalletPageProps) {
   const totalBalance = 542.75;
