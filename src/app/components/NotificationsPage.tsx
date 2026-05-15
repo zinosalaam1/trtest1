@@ -1,6 +1,7 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Bell, Check, X } from 'lucide-react';
 import logo from '../../assets/logo.svg';
-
+import { useState, useEffect } from 'react';
+import { socialApi } from '../utils/api';
 import { motion } from 'motion/react';
 
 interface NotificationsPageProps {
@@ -12,26 +13,44 @@ interface NotificationsPageProps {
 
 
 export function NotificationsPage({
+  onBack,
+  onOpenSettings,
+  onOpenProfile,
+  onNavigate
+}: NotificationsPageProps) {
+
   const [notifications, setNotifications] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    socialApi.notifications().then((data: any) => {
-      setNotifications(data || []);
-      setIsLoading(false);
-    }).catch(() => setIsLoading(false));
+    socialApi.notifications()
+      .then((data: any) => {
+        setNotifications(data || []);
+        setIsLoading(false);
+      })
+      .catch(() => setIsLoading(false));
   }, []);
 
   const handleMarkRead = async (id: string | number) => {
     await socialApi.markRead(Number(id)).catch(() => {});
-    setNotifications(prev => prev.map(n => n.id === id ? { ...n, read: true } : n));
+
+    setNotifications(prev =>
+      prev.map(n =>
+        n.id === id ? { ...n, read: true } : n
+      )
+    );
   };
 
   const handleMarkAllRead = async () => {
     await socialApi.markAllRead().catch(() => {});
-    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+
+    setNotifications(prev =>
+      prev.map(n => ({
+        ...n,
+        read: true
+      }))
+    );
   };
- onBack, onOpenSettings, onOpenProfile, onNavigate }: NotificationsPageProps) {
   return (
     <div className="min-h-screen bg-black text-white flex">
       {/* Left Sidebar */}
