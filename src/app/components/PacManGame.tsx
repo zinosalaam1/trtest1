@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Home, Settings, Trophy, RotateCcw, Pause, Play, Volume2, VolumeX, Award, Star, TrendingUp, Zap, Heart } from 'lucide-react';
 import logo from '../../assets/logo.svg';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface PacManGameProps {
   onBack: () => void;
