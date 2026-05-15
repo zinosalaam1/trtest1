@@ -61,9 +61,9 @@ export function SignupPage() {
     <div className="min-h-screen bg-black text-white flex flex-col">
       <header className="flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Tour Arcade Logo" className="w-10 h-10 object-contain"
+          <img src={logo} alt="Tour Arcade Logo" className="w-20 h-12 object-contain"
   />
-          <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Tour Arcade</span>
+
         </Link>
         <Link to="/signin" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Already have an account?</Link>
       </header>
