@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg';
 import friendsIcon from '../../assets/friends-icon.svg';
 
 import { socialApi } from '../utils/api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 interface ProfilePageProps {
@@ -29,13 +29,19 @@ const recentGames = [
 
 
 export function ProfilePage({
+  onBack,
+  onOpenSettings,
+  onNavigate
+}: ProfilePageProps) {
   const [friends, setFriends] = useState<any[]>([]);
+  const [selectedFriend, setSelectedFriend] = useState<number | null>(null);
 
   useEffect(() => {
-    socialApi.friends().then((data: any) => setFriends(data || [])).catch(() => {});
+    socialApi
+      .friends()
+      .then((data: any) => setFriends(data || []))
+      .catch(() => {});
   }, []);
- onBack, onOpenSettings, onNavigate }: ProfilePageProps) {
-  const [selectedFriend, setSelectedFriend] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-black text-white flex">
