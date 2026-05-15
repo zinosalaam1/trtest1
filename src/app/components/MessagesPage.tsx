@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg';
 
 import { Input } from './ui/input';
 import { socialApi } from '../utils/api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 interface MessagesPageProps {
@@ -15,16 +15,27 @@ interface MessagesPageProps {
 
 
 export function MessagesPage({
+  onBack,
+  onOpenSettings,
+  onOpenProfile,
+  onNavigate,
+}: MessagesPageProps) {
+
   const [conversations, setConversations] = useState<any[]>([]);
+  const [messages, setMessages] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    socialApi.messages().then((data: any) => {
-      setConversations(data || []);
+    Promise.all([
+      socialApi.messages().catch(() => []),
+      socialApi.chatMessages?.().catch?.(() => []) || Promise.resolve([]),
+    ]).then(([convos, msgs]) => {
+      setConversations(convos as any[]);
+      setMessages(msgs as any[]);
       setIsLoading(false);
-    }).catch(() => setIsLoading(false));
+    });
   }, []);
- onBack, onOpenSettings, onOpenProfile, onNavigate }: MessagesPageProps) {
+
   const [selectedChat, setSelectedChat] = useState(1);
   const [messageInput, setMessageInput] = useState('');
 
