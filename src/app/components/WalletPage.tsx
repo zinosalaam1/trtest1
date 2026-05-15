@@ -1,7 +1,9 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Wallet, TrendingUp, ArrowUpRight, ArrowDownLeft, Plus, Bell, MessageCircle } from 'lucide-react';
 import logo from '../../assets/logo.svg';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { walletApi } from '../utils/api';
 
 interface WalletPageProps {
   onBack: () => void;
