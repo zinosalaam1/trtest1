@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, Search, Settings, Bell, MessageCircle, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Star, TrendingUp, Award, Gamepad2, Target, Lock, LogOut } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { ParticleEffect } from './ParticleEffect';
 
 

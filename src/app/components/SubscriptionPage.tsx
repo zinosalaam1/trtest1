@@ -1,5 +1,5 @@
 import { Gamepad2 } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 interface SubscriptionPageProps {
   onNext: () => void;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, Crown, Zap, Trophy, Star, TrendingUp, Gift, Lock } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { ParticleEffect } from './ParticleEffect';
 
 interface PlanSelectionPageProps {

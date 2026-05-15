@@ -1,5 +1,5 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Edit, Share, ArrowLeft, Send, Calendar, Flame, Gamepad2, Bell, MessageCircle, Wallet } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import friendsIcon from '../../assets/friends-icon.svg';
 
 import { socialApi } from '../utils/api';

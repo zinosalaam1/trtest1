@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Settings, Trophy, Users, Calendar, DollarSign, Clock, Gamepad2, Plus, X, Check } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 interface CreateTournamentPageProps {
   onBack: () => void;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Home, Settings, Trophy, Zap, Shield, Flame, Star, TrendingUp, Award, Users } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { PacManGame } from './PacManGame';
 
 interface PacManLauncherProps {

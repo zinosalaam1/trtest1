@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Play, Eye, Trophy, Clock, TrendingUp, MessageCircle, Share2, Flag, Settings as SettingsIcon } from 'lucide-react';
 
 import { motion } from 'motion/react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 interface LiveMatchPageProps {
   matchId?: string;

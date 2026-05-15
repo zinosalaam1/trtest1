@@ -1,5 +1,5 @@
 import { Gamepad2, ChevronLeft, CreditCard, HelpCircle } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { Input } from './ui/input';
 import { Checkbox } from './ui/checkbox';
 import { useState } from 'react';

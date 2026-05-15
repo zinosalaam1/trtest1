@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Gamepad2, Zap, Trophy, Users, TrendingUp, Shield, Award, Star, Clock, DollarSign, Target, Sparkles } from 'lucide-react';
 import { FaTwitter, FaDiscord, FaYoutube, FaTiktok } from 'react-icons/fa';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { useState, useEffect } from 'react';
 
 export function LandingPage() {

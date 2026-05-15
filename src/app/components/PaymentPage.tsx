@@ -1,5 +1,5 @@
 import { Gamepad2, Lock, ChevronRight } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 interface PaymentPageProps {
   onNext: () => void;

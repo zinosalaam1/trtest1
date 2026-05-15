@@ -1,5 +1,5 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, UserPlus, MessageCircle, Send, Phone, Video, MoreVertical, Star, Bell, Wallet } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 import { Input } from './ui/input';
 import { socialApi } from '../utils/api';

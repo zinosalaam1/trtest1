@@ -1,5 +1,5 @@
 import { Menu, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Calendar, Clock, DollarSign, Award, ChevronRight } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 import { motion } from 'motion/react';
 import { showToast } from './ToastManager';

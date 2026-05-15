@@ -1,5 +1,5 @@
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Medal, TrendingUp, Filter, ChevronDown, Bell, MessageCircle, Wallet } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 import { useLeaderboard } from '../hooks/useLeaderboard';
 import { useState } from 'react';

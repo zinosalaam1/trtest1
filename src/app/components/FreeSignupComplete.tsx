@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { CheckCircle, Zap, Trophy, Users, Star } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { ParticleEffect } from './ParticleEffect';
 
 interface FreeSignupCompleteProps {

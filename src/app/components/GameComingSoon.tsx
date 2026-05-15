@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Settings, Trophy, Gamepad2, Clock, Sparkles, Menu, Bell, MessageCircle, Wallet, Home, Users, Gift, ShoppingCart, Crown, Zap } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 import { getGameById } from '../utils/gameConfig';
 import { GameDifficultySelector } from './GameDifficultySelector';
 

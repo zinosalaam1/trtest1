@@ -1,5 +1,5 @@
 import { Menu, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, ChevronRight, Check, CreditCard, DollarSign } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';

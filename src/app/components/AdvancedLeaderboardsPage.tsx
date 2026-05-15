@@ -2,7 +2,7 @@ import { useLeaderboard } from '../hooks/useLeaderboard';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, Search, Settings, Home, Users, Trophy, Gift, Sparkles, ShoppingCart, Crown, Zap, Medal, TrendingUp, Filter, ChevronDown, Bell, MessageCircle, Wallet, Star, Award, Gamepad2 } from 'lucide-react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trbg.png';
 
 
 interface LeaderboardsPageProps {
